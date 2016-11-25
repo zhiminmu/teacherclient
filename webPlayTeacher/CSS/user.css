@@ -1,0 +1,47 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+body{
+	display: flex;
+	display: -webkit-flex;
+	direction: row;
+	flex-flow: wrap;
+	justify-content: center;
+	align-items: center;
+	background: black;
+}
+#login{
+	width: 360px;
+	height: 364px;
+	display: flex;
+	display: -webkit-flex;
+	background: white;
+	justify-content: center;
+	align-items: center;
+	/*direction: row;*/
+	flex-flow: row wrap;
+}
+#form-group{
+	width: 300px;
+	height: 180px;
+	display: inline-flex;
+	display: -webkit-inline-flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	/*border: 1px solid #000;*/
+}
+input[type="text"],input[type="password"]{
+	width: 280px;
+	height: 28px;
+	padding-left: 8px;
+	font-size: 14px;
+	/*border-radius: 4px;*/
+}
+#submit{
+	width: 280px;
+	-webkit-appearance:button;
+	height: 30px;
+}

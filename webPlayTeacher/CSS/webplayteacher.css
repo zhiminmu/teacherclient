@@ -1,0 +1,1147 @@
+html{
+    width:100%;
+    height:100%;
+    min-height: 600px;
+    min-width: 800px;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    width:100%;
+    height:100%;
+    margin: 0px;
+    padding: 0px;
+}
+div#mainwindows_ct{
+    float: left;
+    width:100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-image: url('../images/u1.png');
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+}
+/* head_ct*/
+div#head_ct{
+    float: right;
+    width:98%;
+    height: 8%;
+    margin-right: 1%;
+}
+#startoverbtn{
+    float: right;
+    margin-right: 25px;
+    cursor: pointer;
+}
+#class_start{
+    float: right;
+    margin: 6px 2px 2px 2px;
+    width: 96px;
+    height: 36px;
+    cursor: pointer;
+    background-image: url('../images/u256.png');
+
+}
+#class_start b{
+    float: left;
+    font-size: 12px;
+    margin:9px 0px 0px 22px;
+
+    color:#FFFFFF;
+}
+#class_break{
+    float: right;
+    margin: 6px 2px 2px 2px;
+    cursor: pointer;
+    width: 96px;
+    height: 36px;
+    background-image: url('../images/u258.png');
+}
+#class_break b{
+    float: left;
+
+    margin:9px 0px 0px 22px;
+    font-size: 12px;
+    color:#FFFFFF;
+}
+#windows_full{
+    float: right;
+    margin: 11px 4px 0 0;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/u267.png');
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+}
+
+
+/* left_ct*/
+div#left_ct{
+    float: left;
+    margin: 0px 1% 0px 1%;
+    width:10%;
+    height: 87%;
+    box-shadow: 8px 8px 5px #3C3C3C;
+}
+#user_headpic{
+    position: relative;
+    width:100%;
+    height: 15%;
+    border-bottom: 1px solid #BABABA;
+    background: #474747;
+}
+#user_headpic img{
+    position: absolute;
+    width:48px;
+    height: 48px;
+    top:50%;
+    left:50%;
+    margin-left: -24px;
+    margin-top:-24px;
+}
+#selectedmod{
+    background-color: rgba(52, 36, 13, 0.55);
+    border-radius: 25px;
+}
+#fun_module{
+    position: relative;
+    width:100%;
+    height: 85%;
+    background: #474747;
+}
+#fun_module ul{
+    position: absolute;
+    width: 80px;
+    height: 430px;
+    left:50%;
+    margin-left: -40px;
+    padding: 0px;
+}
+#fun_module ul li{
+    cursor: pointer;
+    float: left;
+    list-style-type: none;
+    width: 100%;
+    height: 12%;
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+}
+#fun_module ul li img{
+    width:30px;
+    height: 30px;
+    margin-left: 31%;
+}
+#fun_module ul li p{
+    color:#BABABA;
+    font-size: 12px;
+    margin:0px;
+    padding: 0px;
+}
+
+div#mainmodule_ct{
+    float: left;
+    width: 87%;
+    height: 87%;
+    margin: 0;
+    padding: 0;
+}
+#mainmdct_ul{
+    position: relative;
+    float: left;
+    width: 100%;
+    height:100%;
+    margin: 0;
+    padding: 0;
+}
+#mainmdct_ul > li{
+    float: left;
+    display: none;
+    width:100%;
+    height:100%;
+    margin: 0;
+    padding: 0;
+}
+#device_page{
+    float: left;
+    width: 85%;
+    height: 88%;
+    margin-left: 6%;
+    margin-top: 3%;
+    box-shadow: 8px 8px 5px #3C3C3C;
+    background: #FFFFFF;
+}
+#devicepg_head{
+    float: left;
+    width: 100%;
+    height: 5%;
+    margin: 0;
+    padding: 0;
+}
+#local_view{
+    float: left;
+    width: 33%;
+    height: 95%;
+    border-right:1px solid #A0A0A0;
+    margin: 0;
+    padding: 0;
+
+}
+#lcv_head{
+    float: left;
+    position: relative;
+    width: 33%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #343434;
+}
+#lcv_head>p{
+    position: absolute;
+    height: 18px;
+    width: 100px;
+    color: #d9d9e7;
+    top:50%;
+    left:50%;
+    margin-left : -50px;
+    margin-top: -9px;
+    padding: 0;
+}
+#video_lcview{
+    position: relative;
+    z-index: 1002;
+    float:left;
+    width: 100%;
+    height: 47%;
+    margin: 0;
+    border-bottom: 1px solid #A0A0A0;
+    padding: 0;
+}
+#camera_rtview{
+    float:left;
+    position: relative;
+    width: 100%;
+    height: 47%;
+    z-index: 1002;
+    margin: 0;
+    padding: 0;
+}
+#start_camera{
+    position: absolute;
+    cursor: pointer;
+    width: 120px;
+    height: 60px;
+    left: 50%;
+    top:50%;
+    margin-left: -60px;
+    margin-top: -30px;
+}
+#device_set{
+    float: left;
+    border-right:1px solid #A0A0A0;
+    width: 33%;
+    height: 95%;
+    margin: 0;
+    padding: 0;
+
+}
+#dvs_head{
+    float: left;
+    position: relative;
+    width: 33%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #343434;
+}
+#dvs_head>p{
+    position: absolute;
+    height: 18px;
+    width: 64px;
+    color: #d9d9e7;
+    top:50%;
+    left:50%;
+    margin-left: -32px;
+    margin-top:-9px;
+    padding: 0;
+}
+#camera_choose{
+    width:100%;
+    height: 24%;
+    border-bottom: 1px solid #A0A0A0;
+}
+#camera_choose>p:first-child{
+    height: auto;
+    width: 90%;
+    margin: 1.5% 0 1.5% 2.5%;
+    padding: 0;
+    color: #A0A0A0;
+}
+#camera_select{
+    margin: 1.5% 0 0 2.5%;
+    width: 95%;
+     height: 25%;
+
+}
+#selectedQ{
+    background-color: #787878;
+    color: #F0F0F0;
+}
+.videoq{
+    float: left;
+    margin: 1.5% 0 0  2.5%;
+    cursor: pointer;
+    position: relative;
+    background-color: #F0F0F0;
+    width: 30%;
+    height:45% ;
+
+}
+.videoq p{
+    position: absolute;
+    width: 34px;
+    height: 18px;
+    top:50%;
+    left: 50%;
+    margin-top: -9px;
+    margin-left: -17px;
+
+}
+
+
+#micro_choose{
+    width:100%;
+    height: 24%;
+    border-bottom: 1px solid #A0A0A0;
+
+}
+#micro_choose>p:first-child{
+    height: auto;
+    width: 90%;
+    margin: 1.5% 0 1.5% 2.5%;
+    padding: 0;
+    color: #A0A0A0;
+}
+#micro_select{
+    margin: 1.5% 0 0 2.5%;
+    width: 95%;
+    height: 25%;
+
+}
+.micro_str{
+    float: left;
+    margin: 1.5% 0 0  2.5%;
+    cursor: pointer;
+    position: relative;
+    color: #F0F0F0;
+    background-color: #787878;
+    width: 30%;
+    height:45% ;
+
+}
+.micro_str p{
+    position: absolute;
+    width: 52px;
+    height: 36px;
+    top:50%;
+    left: 50%;
+    margin-top: -18px;
+    margin-left: -26px;
+
+}
+.reduce_echo{
+    float: left;
+    width: 30%;
+    cursor: pointer;
+    margin: 1.5%  0 0 2.5%;
+    position: relative;
+    background-color: #F0F0F0;
+    height:45% ;
+}
+.reduce_echo p{
+    position: absolute;
+    width: 34px;
+    height: 36px;
+    top:50%;
+    left: 50%;
+    margin-top: -18px;
+    margin-left: -17px;
+
+}
+#video_server{
+    width:auto;
+    height: 16%;
+    border-bottom: 1px solid #A0A0A0;
+}
+#video_server>p:first-child{
+    margin: 1.5%  0 1.5% 2.5%;
+    height: auto;
+    width: auto;
+
+    padding: 0;
+    color: #A0A0A0;
+}
+#vserver_select{
+    margin: 0 0 0 2.5%;
+    float: left;
+
+    width: 75%;
+    height: 45%;
+
+}
+.speed_test{
+    float: left;
+    margin: 0 0 0 2%;
+    cursor: pointer;
+    position: relative;
+    background-color: #F0F0F0;
+    width: 15%;
+    height:45% ;
+
+}
+.speed_test p{
+    position: absolute;
+    width: 32px;
+    height: 18px;
+    top:50%;
+    left: 50%;
+    margin-top: -9px;
+    margin-left: -16px;
+
+}
+#voice_rtview{
+    position: relative;
+    width:49%;
+    height: 35%;
+    float: left;
+    border-right:1px solid #A0A0A0;
+}
+#voice_rtview >div{
+    position: absolute;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    top:50%;
+    margin-left: -40px;
+    margin-top: -40px;
+
+}
+#strong_videortv{
+    position: relative;
+    float: left;
+    width:50%;
+    height: 35%;
+}
+#strong_videortv >div{
+    position: absolute;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    top:50%;
+    margin-left: -40px;
+    margin-top: -40px;
+}
+#student_view{
+    float: left;
+    width: 33%;
+    height: 95%;
+    margin: 0;
+    padding: 0;
+
+}
+#sdv_head{
+    float: left;
+    position: relative;
+    width: 34%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #343434;
+}
+#sdv_head>p{
+    position: absolute;
+    height: 18px;
+    width: 100px;
+    color: #d9d9e7;
+    top:50%;
+    left:50%;
+    margin-left : -50px;
+    margin-top: -9px;
+    padding: 0;
+}
+#video_stdview{
+    position: relative;
+    z-index: 1002;
+    float:left;
+    width: 100%;
+    height: 47%;
+    margin: 0;
+    border-bottom: 1px solid #A0A0A0;
+    padding: 0;
+}
+#vncview{
+    position: relative;
+    float:left;
+    width: 100%;
+    height: 47%;
+
+    margin: 0;
+    padding: 0;
+}
+#vncview> div{
+    position: absolute;
+    cursor: pointer;
+    width: 120px;
+    height: 60px;
+    left: 50%;
+    top:50%;
+    margin-left: -60px;
+    margin-top: -30px;
+}
+
+/* center_ct*/
+div#center_ct{
+    float: left;
+    margin: 0px 1% 0px 0px;
+    width:75%;
+    height: 100%;
+    box-shadow: 8px 8px 5px #3C3C3C;
+}
+#centerleft_ct{
+    float: left;
+    width:75%;
+    height: 100%;
+}
+#ppt_title,.affix-nav{
+    position: relative;
+    width: 100%;
+    height: 6%;
+    /*background: #282828;*/
+    background: #606060;
+}
+#ppt_title p,.affix-nav p{
+    position: absolute;
+    width: auto;
+    color: #C9C9C9;
+    font-size: 13px;
+    margin-left: 2px;
+    height: 16px;
+    top:50%;
+    margin-top:-8px ;
+    padding-left: 20px;
+}
+
+#ppt_doc,.affix-body{
+
+    width:100%;
+    height: 88%;
+    background: #363636;
+
+}
+#wbpage_parent{
+    float: left;
+    position: relative;
+    cursor: default;
+    width: 100%;
+    height: 95%;
+    margin: 0px;
+    padding: 0px;
+}
+#wbpage{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+}
+#wbpage_ul{
+
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+#wbpage_ul li{
+
+}
+#pptbottom_ct,.affix-footer{
+
+   width: 100%;
+    height: 6%;
+   /*background: #282828;*/
+   background: #606060;
+}
+#pptbottom_ct ul{
+    float: left;
+    width:100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+#pptbottom_ct ul li{
+    position: relative;
+    float: left;
+    list-style-type: none;
+    width: 19%;
+    height: 100%;
+}
+#ppt_pagenum p{
+    color: #BABABA;
+    margin: 9% 0 0 0 ;
+    font-size: 13px;
+    cursor: pointer;
+}
+#ppt_changepage p{
+    color: #BABABA;
+    margin: 9% 0 0 0 ;
+    font-size: 13px;
+    cursor: pointer;
+}
+#pre_page img{
+    position: absolute;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    top:50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+}
+#next_page img{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top:50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+#centerright_ct{
+    float: left;
+    width:25%;
+    height: 100%;
+}
+#teactervideo_ct{
+    float: left;
+    width: 100%;
+    height: 30%;
+    background: #000000;
+
+}
+#teactheraction_ct{
+    background: #606060;
+    float: left;
+    width: 100%;
+    height: 6%;
+}
+#teactheraction_ct div p{
+  margin: 11% 0 0 0;
+    font-size: 12px;
+    color: #CCC;
+    cursor: pointer;
+}
+#uploadclassfile{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+#newwb{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+#pptthumb_ct{
+    float: left;
+    width: 100%;
+    height: 64%;
+    background: #4C4C4C;
+}
+/* right_ct*/
+div#right_ct{
+    float: left;
+    width:22%;
+    height: 100%;
+    box-shadow: 8px 8px 5px #3C3C3C;
+
+}
+#cover_div{
+    position: absolute;
+    display: none;
+    float: left;
+    width: 85%;
+    height: 88%;
+    margin-left: 6%;
+    margin-top: 3%;
+    z-index: 1001;
+    opacity: 0.6;
+    background: #FFFFFF;
+}
+#hidedlgct{
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width:2%;
+    height: 100%;
+}
+#hidedlg{
+    position: absolute;
+    cursor: pointer;
+    float: left;
+    border-radius:6px 0px 0px 6px ;
+    width:100%;
+    height:120px;
+    background: #4C4C4C;
+    top:50%;
+    margin-top: -60px;
+}
+#hidedlg p{
+    height: auto;
+    /*color: #363636;*/
+    color: #CCC;
+    margin: 51px 0 0 0 ;
+}
+
+#dlg_headct{
+    float: left;
+    width: 100%;
+    height: 8%;
+    background:#363636 ;
+}
+
+#dlg_headct div p{
+
+    margin: auto;
+    font-size: 12px;
+
+}
+#dlg_headct div img{
+    padding: 4px 0 0 0;
+    margin: 0 0 0 40%;
+
+}
+#selected {
+    color: #30B7FF;
+}
+.dlgtab{
+    color: #6B6A5D;
+    cursor: pointer;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+
+#dlg_bodyct{
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 81%;
+    background:#4C4C4C ;
+}
+
+#dlgbody{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    word-wrap:break-word;
+    overflow:auto;
+    background: #4C4C4C;
+}
+#dlgbody span{
+    margin: 0 4px 0 0;
+    word-wrap:break-word;
+    overflow: auto;
+}
+.myselfmsg{
+    color: #30B7FF;
+}
+.othersmsg{
+    cursor: pointer;
+    text-decoration:underline;
+    color: rgba(93, 176, 40, 0.55);
+}
+.tcldiv_cls{
+    cursor: default;
+    display: none;
+    width:145px ;
+    height: 50px;
+    font-size: 12px;
+    position: absolute;
+    border: 1px solid #A0A0A0;
+    float: left;
+    background-color: aliceblue ;
+}
+.tcldiv_cls p{
+    float: left;
+}
+.sencondrowcls p:hover{
+    background:#343434 ;
+}
+#dlgbody p{
+    margin: auto;
+    color: #A1A1A1;
+    word-wrap:break-word;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    padding: 5px 3px 0px 3px;
+}
+#memberlist{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #4C4C4C;
+    display: none;
+}
+#memberlist ul{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+}
+#memberlist ul li{
+    list-style-type: none;
+    width: 99%;
+    height: 30px;
+    overflow: hidden;
+    padding: 5px 0px 0px 0px;
+}
+#memberlist ul li img{
+    float: left;
+}
+.dlgto{
+    cursor:pointer;
+    float:left;
+    margin:2px 1px 0 1px;
+    width:24px;
+    height:24px;
+   background-image:url('../images/22.png');
+}
+.camera{
+    margin:2px 1px 0 1px;
+    float:left;
+    cursor:pointer;
+    width:24px;
+    height:24px;
+    background-image:url('../images/11.png');
+}
+.userspk{
+    margin:2px 1px 0 1px;
+    float:left;
+    cursor:pointer;
+    width:24px;
+    height:24px;
+    background-image:url('../images/33.png');
+
+}
+#memberlist ul li p{
+    cursor: pointer;
+    float: left;
+    margin:  5px 0 0 2px;
+    padding: 0;
+    font-size: 12px;
+    color: #F8C894;
+}
+#dlg_ctlct{
+    float: right;
+    position: relative;
+    width: 100%;
+    height: 5%;
+    background:#363636 ;
+}
+#tchname{
+    position: relative;
+    float: left;
+    width: 70%;
+    height: 99%;
+}
+#tchname p{
+    float: left;
+    width: 150px;
+    height:20px ;
+    margin: 0 0 0 2px;
+    position: absolute;
+    top:50%;
+    margin-top: -10px;
+}
+#tchname p span{
+    color: rgba(49, 174, 242, 0.55);
+}
+#dlgswitch_ct{
+    position: absolute;
+    right: 1px;
+    width: 50px;
+    height: 20px;
+    top:50%;
+    margin-top: -10px;
+
+
+}
+#switch_ct{
+    width: 50px;
+    height: 20px;
+    border-radius: 10px;
+    position: absolute;
+}
+#switch_ct p{
+    position: absolute;
+    cursor: default;
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: auto;
+    padding: 3px 5px 0px 5px;
+}
+#switch_status{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 333;
+    position: absolute;
+    background: white;
+}
+.open1{
+    background: rgb(117,173,66);
+}
+.open2{
+    top: 0px;
+    right: 0px;
+}
+.close1{
+    background: rgba(255,255,255,0.4);
+    border-left: transparent;
+}
+.close2{
+    left: 0px;
+    top: 0px;
+}
+#dlg_sendct{
+    float: left;
+    width: 100%;
+    height: 6%;
+    background:#4C4C4C ;
+}
+#dlg_sendct textarea{
+    float: left;
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #4c4c4c;
+    color: #C9C9C9;
+    border: none;
+}
+#dlg_sendct img{
+    cursor: pointer;
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+
+/*白板*/
+#canvas_tools{
+    display: none;
+    position: relative;
+    width:100%;
+    height:5%;
+    padding:4px 0 0 0;
+    background: #F0F0F0;
+    float:left;
+
+}
+#canvas_toolscld{
+    position: absolute;
+    width: 100%;
+    height: 26px;
+    top:50%;
+    margin-top: -13px;
+    padding: 0;
+
+}
+#new_newpg{
+    width:16px;
+    height:16px;
+    background-image: url('../images/u483_normal.png');
+    background-repeat:no-repeat;
+    float:left;
+    margin:5px 4px 0 10px;
+}
+#backpg{
+    width:13px;
+    height:13px;
+    background-image: url('../images/u575_normal.png');
+    float:left;
+    margin:6px 4px 0 2px;
+}
+#whichpg{
+    width:30px;
+    height:15px;
+    float:left;
+    border:solid 1px #000000;
+    margin:4px 4px 0 2px;
+
+
+}
+#nextpg{
+    width:13px;
+    height:13px;
+    background-image: url('../images/u581_normal.png');
+    float:left;
+    margin:6px 4px 0 2px;
+}
+#select{
+    width:16px;
+    height:16px;
+    background-image: url('../images/u591_normal.png');
+    float:left;
+    margin:6px 4px 0 2px;
+    background-repeat:no-repeat;
+}
+#deleteele{
+    width:16px;
+    height:16px;
+    background-image: url('../images/u598_normal.png');
+    float:left;
+    margin:6px 4px 0 2px;
+    background-repeat:no-repeat;
+}
+#linekind{
+    width:75px;
+    height:24px;
+    float:left;
+    margin:1px 4px 0 2px;
+
+}
+#lineselect{
+    width:75px;
+    height:24px;
+}
+#rectkind{
+    width:80px;
+    height:24px;
+    float:left;
+    margin:1px 4px 0 2px;
+}
+#rectselect{
+    width:80px;
+    height:24px;
+}
+#newword{
+    width:16px;
+    height:16px;
+    background-image: url('../images/u626_normal.png');
+    float:left;
+    margin:5px 4px 0 4px;
+    background-repeat:no-repeat;
+}
+
+#colorslt{
+    width:30px;
+    height:18px;
+    float:left;
+    padding: 0;
+    border:1px outset ;
+    margin:3px 4px 0 2px;
+}
+#showcolor{
+    width:13px;
+    height:13px;
+    background-image: url('../images/u483_normal.png');
+    float:left;
+    margin:0 4px 0 2px;
+    background-repeat:no-repeat;
+}
+.canvas_tool_on:hover{
+    color: #444;
+    background: #AADFF2;
+    border-color: #ccc;
+    text-decoration: none
+
+}
+.onclickstate{
+    color: #444;
+    background: #AADFF2;
+    border-color: #ccc;
+    text-decoration: none
+
+}
+#close{
+    float: right;
+    margin:3px 10px 0 0;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    border-radius: 12px; 
+    /*background: #777777;   */
+}
+#close::before {
+    content: "\00D7";
+}
+#close:hover,#close:focus{
+    color: #ff0000;
+}
+#uploadFiles li{
+    height: 25px;
+    padding: 10px 0 0 10px;
+    color: #BABABA;
+    font-size: 12px;
+    cursor: pointer;
+    list-style: none;
+    border: 1px solid gray;
+}
+#uploadFiles{
+    margin:0px;
+    padding: 0px;
+}
+#uploadFiles li:hover,#uploadFiles li:focus{
+    background: #343434;
+}
+.affix-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.affix-body-content{
+    width: 600px;
+    height: 300px;
+    border: 1px solid gray;
+    border-radius: 6px;
+}
+.up_op input[type="file"]{
+    margin-top: 20px;
+    position: relative;
+    color: #ff0;
+    margin-left: 80px;
+}
+.up_op input[type="file" i]{
+    text-align: center;
+}
+.up_op input[type="submit"]{
+    margin-left: 20px;
+}
+.progress{
+    margin-top: 30px;
+    font-size: 3em;
+}
+.upload_details ul li{
+    list-style: none;
+    margin-left: 50px;
+    margin-top: 8px;
+    color: #fff;
+    font-size: 12px;
+}

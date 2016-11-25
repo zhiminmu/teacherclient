@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html"; charset="gb2312">
+    <meta http-equiv="description" content="注册页面">
+    <meta http-equiv="author" content="hkshen">
+    <meta http-equiv="date" content="2015-12-24">
+    <title>注册</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+	<script src="../JS/jquery-1.7.1.min.js"></script>
+	<script src="../JS/strophe.js"></script>
+	<script src="../JS/strophe-openfire-websocket.js"></script>
+	<script src="../JS/Adapter.js"></script>
+    <script type="text/javascript" src="../JS/loginValidate.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div>
+            <section class="loginForm">
+                <header>
+                    <h1>视频会议注册</h1>
+                </header>
+                <form method="POST" action="../webplayteacher.html" class="loginForm_content">
+                    <fieldset>
+                        <div class="inputWrap" id="userName">
+                            <input id="userNameInput" type="text" name="用户名" placeholder="个人账号" autofocus="autofocus" required="required">
+                        </div>
+                        <div class="inputWrap" id="corporateAccount">
+                            <input id="corporateAccountInput" type="text" name="企业账号" placeholder="请输入120.25.73.123下的企业账号" required="required">
+                        </div>
+                        <div class="inputWrap" id="conferenceID">
+                            <input id="conferenceIDInput" type="text" name="会议号" placeholder="会议号" required="required">
+                        </div>
+                        <div class="inputWrap" id="password">
+                            <input id="passwordInput" type="password" name="密码" placeholder="请输入个人账号密码" required="required">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <!--<input type="checkbox" checked="checked">-->
+                        <!--<span>下次自动登录</span>-->
+                    </fieldset>
+                    <fieldset>
+                        <input type="button" id="submit" value="注册" />
+                        <input type="submit" style="display: none;" id="rel-submit" />
+                        <!--<a href="live.html">忘记密码</a><a href="#">注册</a>-->
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

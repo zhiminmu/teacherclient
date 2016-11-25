@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>web点播教师端</title>
+ 		<script src="./JS/jquery-1.7.1.min.js"></script>
+		<script src="./JS/strophe.js"></script>
+		<script src="./JS/strophe-openfire-websocket.js"></script>
+		<script src="./JS/Adapter.js"></script>
+		<script src="./JS/webplayteacher.js"></script> 
+		<script type="text/javascript" src="./JS/webPlayer.js"></script>
+		<link href="./CSS/webplayteacher.css" type="text/css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div id="mainwindows_ct">
+			<!-- 头部布局 -->
+			<div id="head_ct">
+				<div id="windows_full"></div>
+				<div id="class_break"><b>课间休息</b></div>
+				<div id="class_start"><b>开始上课</b></div>
+				<p id="startoverbtn">开始上课/下课结束按钮切换</p>
+			</div>
+			<!-- 左侧布局 -->
+			<div id="left_ct">
+				<div id="user_headpic">
+					<img src="./images/userpic.png" />
+				</div>
+				<div id="fun_module">
+					<ul>
+						<li tar="device_ct">
+							<img src="./images/u214.png" />
+							<p align="center">设备</p>
+						</li>
+						<!-- 这里的tar属性与后面功能列表对应的功能是一样的，表示一一对应关系 -->
+						<li id="selectedmod" tar="courseware_ct">
+							<img src="./images/u218.png" />
+							<p align="center">课件</p>
+						</li>
+						<li tar="System_msg_ct">
+							<img src="./images/u222.png" />
+							<p align="center">系统消息</p>
+						</li>
+						<li tar="question_slt_ct">
+							<img src="./images/u226.png" />
+							<p align="center">问题选择</p>
+						</li>
+						<li tar="upload_att_ct">
+							<img src="./images/u230.png" />
+							<p align="center">上传附件</p>
+						</li>
+						<li tar="play_music_ct">
+							<img src="./images/u234.png" />
+							<p align="center">播放音乐</p>
+						</li>
+						<li tar="class_info_ct">
+							<img src="./images/u238.png" />
+							<p align="center">课堂信息</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 主模块布局 -->
+			<div id="mainmodule_ct">
+				<ul id="mainmdct_ul">
+					<!-- 左侧功能列表中设备对应的部分 -->
+					<li id="device_ct">
+						<div id="cover_div"></div>
+						<div id="device_page">
+							<div id="devicepg_head">
+								<div id="lcv_head">
+									<p>本地原始画面</p>
+								</div>
+								<div id="dvs_head">
+									<p align="center">设备配置</p>
+								</div>
+								<div id="sdv_head">
+									<p align="center">学生观看画面</p>
+								</div>
+							</div>
+							<div id="local_view">
+								<div id="video_lcview"></div>
+								<div id="camera_rtview">
+									<div id="start_camera">摄像头直播</div>
+								</div>
+							</div>
+							<div id="device_set">
+								<div id="camera_choose">
+									<p>摄像头选择:</p>
+									<select id="camera_select">
+										<option>USB视频设备(093a:2700)</option>
+									</select>
+									<div id="selectedQ" tar="okq" class="videoq">
+										<p>流畅</p>
+									</div>
+									<div class="videoq" tar="goodq">
+										<p>标清</p>
+									</div>
+									<div class="videoq" tar="highq">
+										<p>高清</p>
+									</div>
+								</div>
+								<div id="micro_choose">
+									<p>麦克风选择:</p>
+									<select id="micro_select">
+										<option>default</option>
+									</select>
+									<div class="micro_str">
+										<p>麦克风增强</p>
+									</div>
+									<div class="reduce_echo">
+										<p>降低回音</p>
+									</div>
+								</div>
+								<div id="video_server">
+									<p>视频服务器:</p>
+									<select id="vserver_select">
+										<option>当前（默认服务器）</option>
+									</select>
+									<div class="speed_test">
+										<p>测速</p>
+									</div>
+
+								</div>
+								<div id="voice_rtview">
+									<div>
+										音频直播
+									</div>
+								</div>
+								<div id="strong_videortv">
+									<div>
+										增强视频直播
+									</div>
+								</div>
+							</div>
+							<div id="student_view">
+								<div id="video_stdview"></div>
+								<div id="vncview">
+									<div>
+										桌面视频直播
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 左侧功能列表中课件的功能细节 -->
+					<li id="courseware_ct" style="display: block">
+						<!-- 中心位置 -->
+						<div id="center_ct">
+							<!-- 中心偏左的位置 -->
+							<div id="centerleft_ct">
+								<div id="ppt_title">
+									<p>PPT文件名称</p>
+								</div>
+								<div id="ppt_doc">
+									<!-- 电子白板工具栏 -->
+									<div id="canvas_tools">
+										<div id="canvas_toolscld">
+											<div id="new_newpg" class="canvas_tool_on"></div>
+											<div id="backpg"></div>
+											<div id="whichpg"></div>
+											<div id="nextpg"></div>
+											<div id="select" class="canvas_tool_on"></div>
+											<div id="deleteele" class="canvas_tool_on"></div>
+											<div id="linekind">
+												<select id="lineselect" class="onclickstate" class="canvas_tool_on">
+													<option value="thinfreeline" linewidth="1">曲线</option>
+													<option value="line" linewidth="1">直线</option>
+													<option value="thickfreeline" linewidth="15">粗曲线</option>
+													<option value="line" linewidth="15">粗直线</option>
+													<option value="fluorepen" linewidth="12">荧光笔</option>
+												</select>
+											</div>
+											<div id="rectkind">
+												<select id="rectselect" class="canvas_tool_on">
+													<option value="rect" linewidth="1">矩形</option>
+													<option value="roundrect" linewidth="1">圆角矩形</option>
+													<option value="round" linewidth="1">圆形</option>
+												</select>
+											</div>
+											<div id="newword" class="canvas_tool_on">
+											</div>
+											<input id="colorslt" type="color" />
+											<span name="close" title="关闭" id="close"></span>
+										</div>
+
+									</div>
+									<!-- 电子白板操作栏 -->
+									<div id="wbpage_parent">
+										<div id="wbpage">
+											<ul id="wbpage_ul">
+
+											</ul>
+										</div>
+									</div>
+
+								</div>
+								<div id="pptbottom_ct">
+									<ul>
+										<li id="ppt_pagenum">
+											<p align="center">页数:n/m</p>
+										</li>
+										<li id="ppt_changepage">
+											<p align="center">切换PPT</p>
+										</li>
+										<li></li>
+										<li id="pre_page"><img src="./images/u212.png"></li>
+										<li id="next_page"><img src="./images/u210.png"></li>
+									</ul>
+								</div>
+							</div>
+							<!-- 中心偏右的位置 -->
+							<div id="centerright_ct">
+								<div id="teactervideo_ct">
+									<!-- 教师摄像头 -->
+								</div>
+								<div id="teactheraction_ct">
+									<div id="uploadclassfile">
+										<p align="center">上传课件</p>
+										<input type="file" name="uploadcoursefile" style="display: none" id="uploadcoursefile" multiple="multiple">
+									</div>
+									<div id="newwb">
+										<p align="center">新建白板</p>
+									</div>
+								</div>
+								<div id="pptthumb_ct">
+									 <!-- 用来存放上传的文件 -->
+									<ul id="uploadFiles">
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div id="hidedlgct">
+							<div id="hidedlg">
+								<p align="center">></p>
+							</div>
+						</div>
+						<div id="right_ct">
+							<div id="dlg_headct">
+								<div id="selected" class="dlgtab" tar="camera_choose">
+									<img src="./images/u20.png">
+									<p align="center">聊天</p>
+								</div>
+								<div class="dlgtab" tar="memberlist">
+									<img src="./images/u24.png">
+									<p id="memnum" align="center">成员(2)</p>
+								</div>
+							</div>
+							<div id="dlg_bodyct">
+								<div id="dlgbody"></div>
+								<div id="memberlist">
+									<ul>
+
+									</ul>
+								</div>
+							</div>
+							<div id="dlg_ctlct">
+								<div id="tchname">
+									<p></p>
+								</div>
+								<div id="dlgswitch_ct">
+									<div id="switch_ct" class="open1">
+										<div id="switch_status" class="open2"></div>
+										<p>开</p>
+									</div>
+								</div>
+							</div>
+							<div id="dlg_sendct">
+								<textarea id="textval"></textarea>
+								<img id="sendmsg" src="./images/u244.png">
+							</div>
+
+						</div>
+					</li>
+					<li id="upload_att_ct" style="display: none">
+						<div id="center_ct">
+							<div class="affix-nav">
+								<p>上传附件文件</p>
+							</div>
+							<div class="affix-body">
+								<div class="affix-body-content">
+									<div class="up_op">
+										<input type="file" name="affix" multiple="multiple" />
+										<input type="submit" value="上传" name="uploadAffix" />
+										<div class="upload_details">
+											<ul>
+												
+											</ul>
+										</div>
+									</div>
+									<div class="progress" style="display: none">
+										<center>
+										<progress value="57" max="100" min="0" id="uploadprogress">0</progress></center>
+									</div>
+								</div>
+								
+							</div>
+							<div class="affix-footer">
+								
+							</div>
+
+						</div>
+					</li>
+					<li id="play_music_ct">
+						<div id="center_ct">
+							
+						</div>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+	</body>
+
+</html>
